@@ -41,6 +41,14 @@ tests cannot claim a live cloud change occurred.
 
 The upper boundary names the principal services and technologies used by this repository. The lower boundary shows the implemented control flow: desired state is validated, provider action remains an explicit integration gate, and sanitized evidence is retained for review and deterministic replay.
 
+## Best complementary diagram
+
+**Recommended view: Multi-tenant edge-routing topology.** A topology view is the strongest complement because it makes network and identity boundaries, enforcement hops, and the governed path physically legible.
+
+![Icon-based multi-tenant edge-routing topology for SaaS-FrontDoor-MultiTenant-Routing](docs/operational-view.svg)
+
+The view follows **Receive tenant domain → Terminate managed TLS → Resolve tenant route → Reach isolated origin**. Use it during design reviews, operational walkthroughs, and failure-mode discussions; use the logical architecture above when the question is which technologies integrate.
+
 ## Quickstart
 
 Requirements: Python 3.11+ and Git. No Azure credentials are required.
