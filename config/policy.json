@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0",
+  "project": "SaaS-FrontDoor-MultiTenant-Routing",
+  "rank": 30,
+  "action": "plan_saas_frontdoor_multitenant_routing",
+  "allowedCredentialModes": [
+    "managed_identity",
+    "workload_identity"
+  ],
+  "protectedTargets": [
+    "production",
+    "break-glass"
+  ],
+  "allowedTenantIds": [
+    "tenant-a"
+  ]
+}
